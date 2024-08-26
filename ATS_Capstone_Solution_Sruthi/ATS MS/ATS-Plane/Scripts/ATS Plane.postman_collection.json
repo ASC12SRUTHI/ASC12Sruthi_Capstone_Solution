@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "39f26367-c1a5-44c6-a3b4-5ea1989f7306",
+		"name": "ATS Plane",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37369842"
+	},
+	"item": [
+		{
+			"name": "Plane",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8021/api/plane",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8021",
+					"path": [
+						"api",
+						"plane"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Specific Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8021/api/plane/PL0002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8021",
+					"path": [
+						"api",
+						"plane",
+						"PL0002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data Insertion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"PL0004\",\r\n        \"planeMaker\": \"Airbus\",\r\n        \"model\": \"Airbus A370\",\r\n        \"seatingCapacity\": 653\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8021/api/plane",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8021",
+					"path": [
+						"api",
+						"plane"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Specific",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update Specific",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"PL0002\",\r\n    \"planeMaker\": \"Boeing\",\r\n    \"model\": \"Boeing 777\",\r\n    \"seatingCapacity\": 250\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8021/api/plane",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8021",
+					"path": [
+						"api",
+						"plane"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
